@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+a {
+  color: #121212;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.site-title {
+  display: inline-block;
+  font-size: 2.0rem;
+  font-weight: bold;
+  line-height: 1px;
+}
+.site-title a {
+  display: block;
+}
+.sec-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #c0c0c0;
+}
+/*
+  wrapper
+*/
+.wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+  ログインフォーム
+*/
+.alert {
+  width: 100%;
+  margin: auto;
+  color: #ff0000;
+}
+.login-wrapper {
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+}
+.login-wrapper dl {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+.login-wrapper dt {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-wrapper dd {
+  width: 60%;
+}
+.login-wrapper input {
+  width: 100%;
+  border: solid 1px #c8c8c8;
+  padding: 10px;
+}
+.button {
+  text-align: center;
+}
+.button input {
+  width: 200px;
+  background-color: #24292e;
+  color: #fff;
+  padding: 15px 0;
+  border: solid 1px #24292e;
+}
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
+  width: 100%;
+  color: #fff;
+  background-color: #121212;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 0;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    padding: 20px 16px;
+  }
+  .toggle_btn {
+    right: 20px;
+  }
+  /*
+    wrapper
+  */
+  .wrapper {
+    min-height: 86.5vh;
+  }
+}
