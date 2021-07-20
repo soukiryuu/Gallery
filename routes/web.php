@@ -17,7 +17,8 @@ use App\Http\Controllers\LoginController;
 $namespace = 'App\Http\Controllers\\';
 
 // メインページ
-Route::get('/', $namespace.'MainController@index')->name('main');
+// Route::get('/', $namespace.'MainController@index')->name('main');
+Route::get('/', $namespace.'MainController@index')->name('welcome');
 // ログインページ
 Route::get('login', $namespace.'LoginController@index')->name('login');
 
