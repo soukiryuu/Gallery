@@ -24,8 +24,8 @@ $(function(){
     });
 
     // DOMの生成
-    var $ele = $('<span />', {class: 'heart'}).append('&hearts;0');
-    $('.ug-lightbox-overlay').append($ele);
+    var $ele = $("<div class='fav_wrapper'><img class='heart' src='http://localhost:8888/Gallery/public/storage/images/icon/heart.png'></img><span class='fav_num'>0</span></div>");
+    $('.ug-gallery-wrapper').append($ele);
 
     // タイトル保持用
     var $tmp_title;
@@ -43,7 +43,8 @@ $(function(){
             }
         }).done(function(data) {
             if (data != 'error') {
-                $('.ug-lightbox-overlay').html("<span class='heart'>&hearts;" + data + "</span>");
+                $('.fav_wrapper').remove();
+                $('.ug-gallery-wrapper').append("<div class='fav_wrapper'><img class='heart' src='http://localhost:8888/Gallery/public/storage/images/icon/heart.png'></img><span class='fav_num'>" + data + "</span></div>");
             } else {
                 console.log('error');
             }
@@ -67,7 +68,8 @@ $(function(){
             }
         }).done(function(data) {
             if (data != 'error') {
-                $('.ug-lightbox-overlay').html("<span class='heart'>&hearts;" + data + "</span>");
+                $('.fav_wrapper').remove();
+                $('.ug-gallery-wrapper').append("<div class='fav_wrapper'><img class='heart' src='http://localhost:8888/Gallery/public/storage/images/icon/heart.png'></img><span class='fav_num'>" + data + "</span></div>");
             } else {
                 console.log('error');
             }

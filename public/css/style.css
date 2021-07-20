@@ -169,14 +169,23 @@ li {
 /*
   heart
 */
-.heart {
-  font-size: 100px;
-  z-index: 2;
+.fav_wrapper {
+  z-index: 4;
   position: absolute;
   bottom: 100px;
   right: 50px;
-  color: #ff69b4;
+  display:flex;/* flexbox */
+  justify-content:center; /* 水平方向 */
+  align-items: center; /* 垂直方向 */
+}
+.heart {
+  z-index: 5;
+  width: 80px;
   cursor: pointer;
+}
+.fav_num {
+  font-size: 100px;
+  color: #ff69b4;
 }
 /*-------------------------------------------
 フッター
@@ -210,11 +219,14 @@ SP
   /*
   heart
   */
-  .heart {
-    font-size: 50px;
-    z-index: 2;
-    position: absolute;
+  .fav_wrapper {
     bottom: 20px;
     right: 10px;
+  }
+  .heart {
+    width: 50px;
+  }
+  .fav_num {
+    font-size: 70px;
   }
 }
