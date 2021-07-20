@@ -32,7 +32,6 @@ $(function(){
     // 写真をクリックされた時にタイトル名保持
     $('.ug-thumb-wrapper').on('click', function() {
         $tmp_title = $(this).children('img').attr('alt');
-        console.log($tmp_title);
         $.ajax({
             url: 'http://160.16.148.142/favorite/get_favorite',
             type: 'POST',
@@ -58,7 +57,7 @@ $(function(){
         // 通信が終わるまではクリック無効
         $(this).css('pointer-events', 'none');
         $.ajax({
-            url: '/favorite/add_favorite',
+            url: 'http://160.16.148.142/favorite/add_favorite',
             type: 'POST',
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
