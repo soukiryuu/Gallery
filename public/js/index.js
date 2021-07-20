@@ -31,7 +31,8 @@ $(function(){
     var $tmp_title;
     // 写真をクリックされた時にタイトル名保持
     $('.ug-thumb-wrapper').on('click', function() {
-        $tmp_title = $(this).children('img').attr('alt')
+        $tmp_title = $(this).children('img').attr('alt');
+        console.log($tmp_title);
         $.ajax({
             url: '/favorite/get_favorite',
             type: 'POST',
