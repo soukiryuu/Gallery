@@ -166,6 +166,18 @@ li {
   background: #fff;
   text-align: center;
 }
+/*
+  heart
+*/
+.heart {
+  font-size: 100px;
+  z-index: 2;
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  color: #ff69b4;
+  cursor: pointer;
+}
 /*-------------------------------------------
 フッター
 -------------------------------------------*/
@@ -193,5 +205,16 @@ SP
   }
   .toggle_btn {
     right: 20px;
+  }
+
+  /*
+  heart
+  */
+  .heart {
+    font-size: 50px;
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
   }
 }

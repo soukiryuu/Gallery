@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
+use App\Models\Favorite;
 
 class MainController extends Controller
 {
@@ -55,5 +56,40 @@ class MainController extends Controller
         // LoginControllerを呼ぶ
         $login_controller = app()->make('App\Http\Controllers\LoginController');
         return $result = $login_controller->checkAuthDateUse($auth_code);
+    }
+
+    /**
+     * お気に入り数追加
+     * @param Request $request
+     * 
+     * @return String 
+     */
+    function addFavorite(Request $request) {
+        try {
+            $result = Favorite::addFavorite($request->input('title'));
+            if ($result) {
+                $result2 = Favorite::getFavorite($request->input('title'));
+                return $result2->favorite_num;
+            } else {
+                return 'error';
+            }
+        } catch(\PDOException $e) {
+            return 'error';
+        }
+    }
+
+    /**
+     * お気に入り数取得
+     * @param Request $request
+     * 
+     * @return String 
+     */
+    function getFavorite(Request $request) {
+        try {
+            $result = Favorite::getFavorite($request->input('title'));
+            return $result->favorite_num;
+        } catch(\PDOException $e) {
+            return 'error';
+        }
     }
 }

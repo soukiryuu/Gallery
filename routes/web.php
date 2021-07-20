@@ -18,6 +18,8 @@ $namespace = 'App\Http\Controllers\\';
 
 // メインページ
 Route::get('/', $namespace.'MainController@index')->name('main');
+Route::post('/favorite/add_favorite', $namespace.'MainController@addFavorite');
+Route::post('/favorite/get_favorite', $namespace.'MainController@getFavorite');
 // ログインページ
 Route::get('login', $namespace.'LoginController@index')->name('login');
 
