@@ -53,10 +53,9 @@ $(function(){
     });
 
     // ハートをクリックされた場合
-    $('.heart').on('click', function() {
+    $(document).on('click', '.heart', function() {
         // 通信が終わるまではクリック無効
         $(this).css('pointer-events', 'none');
-        console.log('click');
         $.ajax({
             url: 'http://160.16.148.142/favorite/add_favorite',
             type: 'POST',
