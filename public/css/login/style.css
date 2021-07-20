@@ -136,4 +136,7 @@ SP
   .wrapper {
     min-height: 86.5vh;
   }
+  .login-wrapper {
+    width: 80%;
+  }
 }

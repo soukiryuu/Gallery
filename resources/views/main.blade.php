@@ -19,7 +19,7 @@
             <a href="index.html">りな写真集</a>
         </h1>
 
-        <nav id="navi">
+        <!-- <nav id="navi">
             <ul class="nav-menu">
                 <li><a href="#pickup">PICK UP</a></li>
                 <li><a href="#feature">FEATURE</a></li>
@@ -38,7 +38,7 @@
             <span></span>
         </div>
 
-        <div id="mask"></div>
+        <div id="mask"></div> -->
     </header>
     <div class="main">
         <section id="main-gallery">
