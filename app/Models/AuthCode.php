@@ -31,7 +31,11 @@ class AuthCode extends Model
             if (empty($date_use)) { // 使用日付がNULL(未使用)
                 return $date_use = 'unused';
             } else {
-                return $date_use;
+                if ($tmp_result->dead_line_flg == 1) { // 有効期限が無期限の場合
+                    return 'admin';
+                } else {
+                    return $date_use;
+                }
             }
         } else {
             return $date_use;

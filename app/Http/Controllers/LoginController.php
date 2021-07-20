@@ -57,6 +57,13 @@ class LoginController extends Controller
                         'error' => '',
                     ]);
                 }
+            } elseif($result == 'admin') { // 無期限コードの場合
+                // セッションにコードを一時保存
+                session(['auth_code' => $auth_code]);
+                return $collection = collect([
+                    'code' => 1,
+                    'error' => '',
+                ]);
             } else {
                 // 使用日付に1時間加算
                 $tmp_date = new DateTime($result);
